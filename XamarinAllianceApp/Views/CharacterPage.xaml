@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAllianceApp.Views.CharacterPage">
+    <ContentPage.Content>
+        <!--<ScrollView>-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TableView Intent="Data"
+                           Grid.Row="0">
+                    <TableRoot>
+                        <TableSection Title="Basic Info">
+                            <TextCell Text="Name"
+                                      Detail="{Binding Name}" />
+                            <TextCell Text="Gender"
+                                      Detail="{Binding Gender}" />
+                            <TextCell Text="Height"
+                                      Detail="{Binding Height}" />
+                            <TextCell Text="Databank Url"
+                                      Detail="{Binding DatabankUrl}" />                           
+                        </TableSection>                       
+                    </TableRoot>
+                </TableView>
+
+                <StackLayout Grid.Row="1">
+                    <Label Text="Biography" FontAttributes="Bold" />
+                    <Label Text="{Binding Biography}" />
+                </StackLayout>
+                <StackLayout  Grid.Row="2">
+                    <Label Text="Weapons"
+                           FontAttributes="Bold" />
+                    <ListView x:Name="lstWeapons"
+                              ItemsSource="{Binding Weapons}"
+                              BackgroundColor="Blue"
+                              HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout HorizontalOptions="Start"
+                                                 Orientation="Vertical"
+                                                 Padding="15,5,5,15">
+                                        <Label  Text="{Binding Name}"
+                                                FontAttributes="Bold" />
+                                        <Label   Text="{Binding Description}" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>  
+                <StackLayout  Grid.Row="3">
+                    <Label Text="Appearances"
+                           FontAttributes="Bold" />
+                    <ListView x:Name="lstAppearances"
+                              ItemsSource="{Binding Appearances}"
+                              HasUnevenRows="True"
+                              BackgroundColor="Yellow">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout HorizontalOptions="Start"
+                                                 Orientation="Vertical"
+                                                 Padding="15,5,5,15">
+                                        <Label Text="{Binding Name}"
+                                               FontAttributes="Bold" />
+                                        <Label Text="{Binding Description}" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>  
+            </Grid>
+        <!--</ScrollView>-->
+    </ContentPage.Content>
+
+</ContentPage>
