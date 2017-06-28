@@ -3,18 +3,22 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinAllianceApp.Controllers;
 using XamarinAllianceApp.Models;
+using XamarinAllianceApp.Services;
 
 namespace XamarinAllianceApp.Views
 {
     public partial class CharacterListPage : ContentPage
     {
-        private CharacterService service;
+       // private CharacterService service;
+        private CharactersService mobileService;
 
         public CharacterListPage()
         {
             InitializeComponent();
 
-            service = new CharacterService();
+            //  service = new CharacterService();
+            mobileService = new CharactersService();
+
         }
 
         protected override async void OnAppearing()
@@ -22,7 +26,10 @@ namespace XamarinAllianceApp.Views
             base.OnAppearing();
 
             // Set syncItems to true in order to synchronize the data on startup when running in offline mode
-            await RefreshItems(true);
+           await RefreshItems(true);
+
+
+
         }
 
         // http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview/#pulltorefresh
@@ -58,7 +65,7 @@ namespace XamarinAllianceApp.Views
         {
             using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
             {
-                characterList.ItemsSource = await service.GetCharactersAsync();
+                characterList.ItemsSource = await mobileService.GetCharactersAsync();
             }
         }
 

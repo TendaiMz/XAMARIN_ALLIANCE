@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAllianceApp.Views.LandingPage">
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center">
+        <ActivityIndicator HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           IsVisible="False"
+                           IsEnabled="True"
+                           x:Name="loadIndicator" />
+        <Button x:Name="charactersBtn"
+                Text="View Characters"
+                Clicked="charactersBtn_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+        <Button x:Name="imageBtn"
+                Text="Download Image"
+                Clicked="imageBtn_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+        <Button x:Name="guidBtn"
+                Text="Get Diploma Guid"
+                Clicked="guidBtn_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+        <Label x:Name="guidLabel" />
+        <Image x:Name="imageArea"
+               IsVisible="False" />
+    </StackLayout>
+
+</ContentPage>

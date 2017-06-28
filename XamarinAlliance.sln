@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26020.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinAllianceApp", "XamarinAllianceApp\XamarinAllianceApp.csproj", "{3AFA591D-C115-4AC9-9519-F788373ECDE9}"
 EndProject
@@ -102,6 +102,8 @@ Global
 		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|ARM.Deploy.0 = Debug|ARM
 		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|iPhone.ActiveCfg = Debug|x86
 		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|iPhoneSimulator.Build.0 = Debug|x86
+		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|iPhoneSimulator.Deploy.0 = Debug|x86
 		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{0483302A-9154-434A-93EB-5633AAFD4409}.Debug|Mixed Platforms.Deploy.0 = Debug|x86

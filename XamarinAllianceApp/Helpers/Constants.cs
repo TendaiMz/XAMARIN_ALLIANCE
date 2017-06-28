@@ -12,5 +12,9 @@ namespace XamarinAllianceApp.Helpers
         /// File name for the embedded characters JSON file
         /// </summary>
         public static readonly string CharactersFilename = "XamarinAllianceApp.characters.json";
+        public static readonly string mobileServiceClientUrl = "http://xamarinalliancebackend.azurewebsites.net";
+        public static readonly string secureMobileServiceClientUrl = "https://xamarinalliancesecurebackend.azurewebsites.net";
+
+
     }
 }
